@@ -1,0 +1,344 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tiu.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Tiu.Data.PagerTable">
+            <summary>
+            分页DataTable
+            </summary>
+        </member>
+        <member name="T:Tiu.Data.IPagerable">
+            <summary>
+            分页接口
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.IPagerable.PagerTableName">
+            <summary>
+            查询的数据表的名称（或者是视图的名称）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.IPagerable.OrderBy">
+            <summary>
+            排序字段名（默认为"ID"）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.IPagerable.OrderWay">
+            <summary>
+            排序方式（默认为DESC）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.IPagerable.SeatchWhere">
+            <summary>
+            分页查询条件（不用加"where"）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.IPagerable.PageNum">
+            <summary>
+            页码（第几页,默认值1）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.IPagerable.PageSize">
+            <summary>
+            每页显示的行数（默认值10）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.IPagerable.PageCount">
+            <summary>
+            总页数（用于查询后返回数据）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.IPagerable.RecordCount">
+            <summary>
+            总记录数（用于查询后返回数据）
+            </summary>
+        </member>
+        <member name="M:Tiu.Data.PagerTable.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Tiu.Data.PagerTable.ToEasyUiDataGridJson">
+            <summary>
+            转为EasyUI的DataGrid数据源（格式{"total":0,"rows":[]"）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Data.PagerTable.RepalceHtml(System.String)">
+            <summary>
+            转义json传递时导致错误的符号
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Tiu.Data.PagerTable.PagerTableName">
+            <summary>
+            查询的数据表的名称（或者是视图的名称）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.PagerTable.OrderBy">
+            <summary>
+            排序字段名（默认为"ID"）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.PagerTable.OrderWay">
+            <summary>
+            排序方式（默认为DESC）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.PagerTable.SeatchWhere">
+            <summary>
+            分页查询条件（不用加"where"）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.PagerTable.PageNum">
+            <summary>
+            页码（第几页,默认值1）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.PagerTable.PageSize">
+            <summary>
+            每页显示的行数（默认值10）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.PagerTable.PageCount">
+            <summary>
+            总页数（用于查询后返回数据）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.PagerTable.RecordCount">
+            <summary>
+            总记录数（用于查询后返回数据）
+            </summary>
+        </member>
+        <member name="T:Tiu.Data.DbModel">
+            <summary>
+            数据表映射类
+            </summary>
+        </member>
+        <member name="M:Tiu.Data.DbModel.GetTableAttribute">
+            <summary>
+            获取数据表名信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Data.DbModel.GetColumnsInfo">
+            <summary>
+            获取数据表的所有列信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Tiu.Data.SelectOrderWay">
+            <summary>
+            查询排序方式
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SelectOrderWay.ASC">
+            <summary>
+            升序
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SelectOrderWay.DESC">
+            <summary>
+            降序
+            </summary>
+        </member>
+        <member name="T:Tiu.Data.SqlServerXtype">
+            <summary>
+            SqlServerXtype
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.image_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.text_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.uniqueidentifier_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.tinyint_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.smallint_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.int_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.smalldatetime_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.real_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.money_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.datetime_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.float_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.sql_variant_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.ntext_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.bit_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.decimal_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.numeric_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.smallmoney_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.bigint_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.varbinary_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.varchar_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.binary_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.char_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.timestamp_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.nvarchar_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.nchar_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.xml_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Tiu.Data.SqlServerXtype.sysname_t">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Tiu.Data.WindowsMessages">
+            <summary>
+            Windows消息ID
+            </summary>
+        </member>
+        <member name="T:Tiu.Data.PagerList`1">
+            <summary>
+            分页List
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Tiu.Data.PagerList`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.PagerList`1.PagerTableName">
+            <summary>
+            查询的数据表的名称（或者是视图的名称）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.PagerList`1.OrderBy">
+            <summary>
+            排序字段名（默认为"ID"）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.PagerList`1.OrderWay">
+            <summary>
+            排序方式（默认为DESC）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.PagerList`1.SeatchWhere">
+            <summary>
+            分页查询条件（不用加"where"）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.PagerList`1.PageNum">
+            <summary>
+            页码（第几页,默认值1）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.PagerList`1.PageSize">
+            <summary>
+            每页显示的行数（默认值10）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.PagerList`1.PageCount">
+            <summary>
+            总页数（用于查询后返回数据）
+            </summary>
+        </member>
+        <member name="P:Tiu.Data.PagerList`1.RecordCount">
+            <summary>
+            总记录数（用于查询后返回数据）
+            </summary>
+        </member>
+    </members>
+</doc>

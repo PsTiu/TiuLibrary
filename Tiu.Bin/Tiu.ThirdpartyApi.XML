@@ -1,0 +1,643 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tiu.ThirdpartyApi</name>
+    </assembly>
+    <members>
+        <member name="T:Tiu.ThirdpartyApi.Bing.HotSpot">
+            <summary>
+            图片热点
+            </summary>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.HotSpot.CreateHotSpot(System.Xml.XmlNode)">
+            <summary>
+            创建HotSpot对象
+            </summary>
+            <param name="hopSpotNode">XmlNode</param>
+            <returns></returns>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.HotSpot.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.HotSpot.Link">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.HotSpot.Query">
+            <summary>
+            问题
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.HotSpot.LocX">
+            <summary>
+            热点的X坐标（相对于图片左上角）
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.HotSpot.LocY">
+            <summary>
+            热点的Y坐标（相对于图片左上角）
+            </summary>
+        </member>
+        <member name="T:Tiu.ThirdpartyApi.Google.ForecastInformation">
+            <summary>
+            预报信息
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.ForecastInformation.City">
+            <summary>
+            天气信息所属城市
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.ForecastInformation.PostalCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.ForecastInformation.Latitude_e6">
+            <summary>
+            纬度
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.ForecastInformation.Longitude_e6">
+            <summary>
+            经度
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.ForecastInformation.ForecastDate">
+            <summary>
+            预报时间
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.ForecastInformation.CurrentDateTime">
+            <summary>
+            当前时间
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.ForecastInformation.UnitSystem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Tiu.ThirdpartyApi.Google.ForecastConditionsCollection">
+            <summary>
+            天气预报集合
+            </summary>
+        </member>
+        <member name="T:Tiu.ThirdpartyApi.Gravatar">
+            <summary>
+            Gravatar头像的API
+            </summary>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Gravatar.GetDefaultAvatarUrl">
+            <summary>
+            获取默认头像地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Gravatar.GetDefaultAvatarUrl(Tiu.ThirdpartyApi.Gravatar.DefaultImage)">
+            <summary>
+            获取默认头像地址
+            </summary>
+            <param name="defaultImage">缺省默认头像</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Gravatar.GetGravatarUrl(System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            获取GravatarUrl头像地址
+            </summary>
+            <param name="email">邮箱地址</param>
+            <param name="defaultImgUrl">默认图片地址（为null的话使用系统设置的默认头像地址）</param>
+            <param name="size">大小（为null表示使用默认大小）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Gravatar.GetGravatarUrl(System.String,System.String)">
+            <summary>
+            获取GravatarUrl头像地址
+            </summary>
+            <param name="email">邮箱地址</param>
+            <param name="defaultImgUrl">默认图片地址（为null的话使用系统设置的默认头像地址）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Gravatar.GetGravatarUrl(System.String,System.Nullable{System.Int32})">
+            <summary>
+            获取GravatarUrl头像地址
+            </summary>
+            <param name="email">邮箱地址</param>
+            <param name="size">大小（为null表示使用默认大小）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Gravatar.GetGravatarUrl(System.String)">
+            <summary>
+            获取GravatarUrl头像地址
+            </summary>
+            <param name="email">邮箱地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Gravatar.GetGravatarUrl(System.String,System.String,System.Nullable{System.Int32},System.Boolean,System.Nullable{Tiu.ThirdpartyApi.Gravatar.Rating})">
+            <summary>
+            获取GravatarUrl头像地址
+            </summary>
+            <param name="email">邮箱地址</param>
+            <param name="defaultImgUrl">默认图片地址（为null的话使用系统设置的默认头像地址）</param>
+            <param name="size">大小（为null表示使用默认大小）</param>
+            <param name="forceDefault">是否强制显示默认头像</param>
+            <param name="rating">头像分级</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Gravatar.GetGravatarUrl(System.String,Tiu.ThirdpartyApi.Gravatar.DefaultImage,System.Nullable{System.Int32},System.Boolean,System.Nullable{Tiu.ThirdpartyApi.Gravatar.Rating})">
+            <summary>
+            获取GravatarUrl头像地址
+            </summary>
+            <param name="email">邮箱地址</param>
+            <param name="defaultImgUrl">默认图片地址（为null的话使用系统设置的默认头像地址）</param>
+            <param name="size">大小（为null表示使用默认大小）</param>
+            <param name="forceDefault">是否强制显示默认头像</param>
+            <param name="rating">头像分级</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tiu.ThirdpartyApi.Gravatar.DefaultImage">
+            <summary>
+            默认头像
+            </summary>
+        </member>
+        <member name="T:Tiu.ThirdpartyApi.Gravatar.Rating">
+            <summary>
+            头像分级
+            </summary>
+        </member>
+        <member name="T:Tiu.ThirdpartyApi.Bing.MessageCollection">
+            <summary>
+            图片相关信息集合
+            </summary>
+        </member>
+        <member name="T:Tiu.ThirdpartyApi.Bing.BingImage">
+            <summary>
+            Bing图片信息
+            </summary>
+        </member>
+        <member name="F:Tiu.ThirdpartyApi.Bing.BingImage.BING_URL">
+            <summary>
+            Bing的地址
+            </summary>
+        </member>
+        <member name="F:Tiu.ThirdpartyApi.Bing.BingImage.DEFAULT_WIDTH">
+            <summary>
+            图片默认宽度
+            </summary>
+        </member>
+        <member name="F:Tiu.ThirdpartyApi.Bing.BingImage.DEFAULT_HEIGHT">
+            <summary>
+            图片默认高度
+            </summary>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImage.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImage.CreateBingImage(System.Xml.XmlNode)">
+            <summary>
+            创建一个BingImage
+            </summary>
+            <param name="imageNode">XmlNode</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImage.GetBingImage(System.Int32)">
+            <summary>
+            获取Bing图片
+            </summary>
+            <param name="index">几天以前（默认为0，表示当天的图片，1就表示1天以前的图片）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImage.GetBingImageOfCurrentDay">
+            <summary>
+            获取当天的Bing图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImage.ToImage">
+            <summary>
+            转为图片对象（保持原宽高）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImage.ToImage(System.Int32,System.Int32)">
+            <summary>
+            转为图片对象，指定宽高
+            </summary>
+            <param name="width">宽（小于0表示保持默认宽度）</param>
+            <param name="height">高（小于0表示保持默认高度）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImage.ToImageAutoHeight(System.Int32)">
+            <summary>
+            转为图片对象，指定宽，高按照比例进行缩放
+            </summary>
+            <param name="width">宽</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImage.ToImageAutoWidth(System.Int32)">
+            <summary>
+            转为图片对象，指定高，宽按照比例进行缩放
+            </summary>
+            <param name="height">高</param>
+            <returns></returns>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.BingImage.StartDate">
+            <summary>
+            图片开始在首页显示的时间
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.BingImage.EndDate">
+            <summary>
+            图片结束在首页显示的时间
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.BingImage.Url">
+            <summary>
+            图片的Url地址
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.BingImage.Copyright">
+            <summary>
+            图片的版权信息
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.BingImage.Drk">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.BingImage.Top">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.BingImage.Bot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.BingImage.HotSpots">
+            <summary>
+            图片热点集合
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.BingImage.Messages">
+            <summary>
+            图片相关信息集合
+            </summary>
+        </member>
+        <member name="T:Tiu.ThirdpartyApi.Bing.Message">
+            <summary>
+            图片相关信息
+            </summary>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.Message.CreateMessage(System.Xml.XmlNode)">
+            <summary>
+            创建Message对象
+            </summary>
+            <param name="item">XmlNode</param>
+            <returns></returns>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.Message.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.Message.Link">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.Message.Text">
+            <summary>
+            描述文本
+            </summary>
+        </member>
+        <member name="T:Tiu.ThirdpartyApi.Bing.BingImageCollection">
+            <summary>
+            Bing图片信息集合
+            </summary>
+        </member>
+        <member name="F:Tiu.ThirdpartyApi.Bing.BingImageCollection.REQUEST_URL_FORMAT_STR">
+            <summary>
+            请求地址的格式化字符串
+            </summary>
+        </member>
+        <member name="F:Tiu.ThirdpartyApi.Bing.BingImageCollection.MIN_INDEX">
+            <summary>
+            请求参数idx的最小值
+            </summary>
+        </member>
+        <member name="F:Tiu.ThirdpartyApi.Bing.BingImageCollection.MAX_INDEX">
+            <summary>
+            请求参数idx的最大值
+            </summary>
+        </member>
+        <member name="F:Tiu.ThirdpartyApi.Bing.BingImageCollection.MIN_NUMBER">
+            <summary>
+            请求参数n的最小值
+            </summary>
+        </member>
+        <member name="F:Tiu.ThirdpartyApi.Bing.BingImageCollection.MAX_NUMBER">
+            <summary>
+            请求参数n的最大值
+            </summary>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImageCollection.GetBingImages(System.Int32,System.Int32)">
+            <summary>
+            获取Bing图片（集合）
+            </summary>
+            <param name="index">几天以前（默认为0，表示当天的图片，1就表示1天以前的图片）</param>
+            <param name="number"> 图片数量，最大为8，图片返回顺序为由新到旧（默认为1）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImageCollection.GetBingImages(System.Int32)">
+            <summary>
+            获取当天开始Bing图片（集合）
+            </summary>
+            <param name="number"> 图片数量，最大为8，图片返回顺序为由新到旧（默认为1）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImageCollection.ToImages">
+            <summary>
+            转为图片对象集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImageCollection.ToImages(System.Int32,System.Int32)">
+            <summary>
+            转为图片对象集合，指定宽高
+            </summary>
+            <param name="width">宽（小于0表示保持默认宽度）</param>
+            <param name="height">高（小于0表示保持默认高度）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImageCollection.ToImagesAutoHeight(System.Int32)">
+            <summary>
+            转为图片对象集合，指定宽，高按照比例进行缩放
+            </summary>
+            <param name="width">宽</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImageCollection.ToImagesAutoWidth(System.Int32)">
+            <summary>
+            转为图片对象集合，指定高，宽按照比例进行缩放
+            </summary>
+            <param name="height">高</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImageCollection.Xml2BingImgs(System.Xml.XmlDocument)">
+            <summary>
+            XmlDocument转为BingImageCollection
+            </summary>
+            <param name="xmlDoc">XmlDocument对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImageCollection.GetXmlStream(System.Int32,System.Int32)">
+            <summary>
+            获取Bing图片的XML信息流
+            </summary>
+            <param name="index">几天以前（默认为0，表示当天的图片，1就表示1天以前的图片）</param>
+            <param name="number"> 图片数量，最大为8，图片返回顺序为由新到旧（默认为1）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Bing.BingImageCollection.GetXmlDoc(System.Int32,System.Int32)">
+            <summary>
+            获取Bing图片的XML文档对象
+            </summary>
+            <param name="index">几天以前（默认为0，表示当天的图片，1就表示1天以前的图片）</param>
+            <param name="number"> 图片数量，最大为8，图片返回顺序为由新到旧（默认为1）</param>
+            <returns></returns>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.BingImageCollection.LoadingMessage">
+            <summary>
+            图片加载中的提示信息
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.BingImageCollection.PreviousImageText">
+            <summary>
+            上一张图片的链接文本
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Bing.BingImageCollection.NextImageText">
+            <summary>
+            下一张图片的链接文本
+            </summary>
+        </member>
+        <member name="T:Tiu.ThirdpartyApi.Google.ForecastConditionscs">
+            <summary>
+            天气预报（一天的天气情况）
+            </summary>
+        </member>
+        <member name="F:Tiu.ThirdpartyApi.Google.ForecastConditionscs.ICON_ROOT_URL">
+            <summary>
+            天气图标的根路径
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.ForecastConditionscs.DayOfWeek">
+            <summary>
+            星期
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.ForecastConditionscs.Low">
+            <summary>
+            最低温度
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.ForecastConditionscs.High">
+            <summary>
+            最高温度
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.ForecastConditionscs.Icon">
+            <summary>
+            天气图标（相对路径）
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.ForecastConditionscs.IconFullRule">
+            <summary>
+            天气图标（全路径）
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.ForecastConditionscs.Condition">
+            <summary>
+            天气情况
+            </summary>
+        </member>
+        <member name="T:Tiu.ThirdpartyApi.Google.CurrentConditions">
+            <summary>
+            当前天气情况
+            </summary>
+        </member>
+        <member name="F:Tiu.ThirdpartyApi.Google.CurrentConditions.ICON_ROOT_URL">
+            <summary>
+            天气图标的根路径
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.CurrentConditions.Condition">
+            <summary>
+            气候情况（如“晴”，“阴”）
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.CurrentConditions.Temp_f">
+            <summary>
+            华氏°
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.CurrentConditions.Temp_c">
+            <summary>
+            摄氏°
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.CurrentConditions.Humidity">
+            <summary>
+            湿度
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.CurrentConditions.Icon">
+            <summary>
+            天气图标（相对路径）
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.CurrentConditions.IconFullRule">
+            <summary>
+            天气图标（全路径）
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.CurrentConditions.WindCondition">
+            <summary>
+            风
+            </summary>
+        </member>
+        <member name="T:Tiu.ThirdpartyApi.Bing.HotSpotCollection">
+            <summary>
+            图片热点集合
+            </summary>
+        </member>
+        <member name="T:Tiu.ThirdpartyApi.Google.Weather">
+            <summary>
+            天气信息
+            </summary>
+        </member>
+        <member name="F:Tiu.ThirdpartyApi.Google.Weather.REQUEST_URL_FORMAT">
+            <summary>
+            请求地址
+            </summary>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Google.Weather.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Google.Weather.GetWeather(System.String)">
+            <summary>
+            获取天气情况
+            </summary>
+            <param name="place">地方名（拼音或者中文）</param>
+            <param name="hl">语言（如："zh-cn"）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Google.Weather.GetWeather(System.String,System.String)">
+            <summary>
+            获取天气情况
+            </summary>
+            <param name="place">地方名（拼音或者中文）</param>
+            <param name="hl">语言（如："zh-cn"）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Google.Weather.Xml2Weather(System.Xml.XmlDocument)">
+            <summary>
+            把XML转成天气实例
+            </summary>
+            <param name="xmlDoc">XmlDocument</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Google.Weather.GetForecastConditions(System.Xml.XmlNode)">
+            <summary>
+            从XmlNode中解析出CurrentConditions对象并返回该对象
+            </summary>
+            <param name="node_weather"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Google.Weather.GetCurrentConditions(System.Xml.XmlNode)">
+            <summary>
+            从XmlNode中解析出CurrentConditions对象并返回该对象
+            </summary>
+            <param name="node_weather"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Google.Weather.GetForecastInformation(System.Xml.XmlNode)">
+            <summary>
+            从XmlNode中解析出ForecastInformation对象并返回该对象
+            </summary>
+            <param name="node_weather"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Google.Weather.GetXmlDoc(System.String,System.String)">
+            <summary>
+            获取Xml
+            </summary>
+            <param name="place">地方名（拼音或者中文）</param>
+            <param name="hl">语言（如："zh-cn"）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.ThirdpartyApi.Google.Weather.GetXmlStream(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="place">地方名（拼音或者中文）</param>
+            <param name="hl">语言（如："zh-cn"）</param>
+            <returns></returns>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.Weather.ModuleId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.Weather.TabId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.Weather.MobileRow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.Weather.MobileZipped">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.Weather.Row">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.Weather.Section">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.Weather.Forecast">
+            <summary>
+            预报信息
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.Weather.Current">
+            <summary>
+            当天天气情况
+            </summary>
+        </member>
+        <member name="P:Tiu.ThirdpartyApi.Google.Weather.ForecastConditions">
+            <summary>
+            接下来几天的预报
+            </summary>
+        </member>
+    </members>
+</doc>

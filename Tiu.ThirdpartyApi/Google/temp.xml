@@ -1,0 +1,50 @@
+﻿<?xml version="1.0"?>
+<xml_api_reply version="1">
+  <weather module_id="0" tab_id="0" mobile_row="0" mobile_zipped="1" row="0" section="0" >
+    <forecast_information>
+      <city data="Zhuhai, Guangdong"/>
+      <postal_code data="zhuhai"/>
+      <latitude_e6 data=""/>
+      <longitude_e6 data=""/>
+      <forecast_date data="2011-09-27"/>
+      <current_date_time data="2011-09-28 01:00:00 +0000"/>
+      <unit_system data="SI"/>
+    </forecast_information>
+    <current_conditions>
+      <condition data="局部多云"/>
+      <temp_f data="84"/>
+      <temp_c data="29"/>
+      <humidity data="湿度： 70%"/>
+      <icon data="/ig/images/weather/partly_cloudy.gif"/>
+      <wind_condition data="风向： 北、风速：2 米/秒"/>
+    </current_conditions>
+    <forecast_conditions>
+      <day_of_week data="周二"/>
+      <low data="26"/>
+      <high data="31"/>
+      <icon data="/ig/images/weather/mostly_sunny.gif"/>
+      <condition data="以晴为主"/>
+    </forecast_conditions>
+    <forecast_conditions>
+      <day_of_week data="周三"/>
+      <low data="26"/>
+      <high data="31"/>
+      <icon data="/ig/images/weather/mostly_sunny.gif"/>
+      <condition data="以晴为主"/>
+    </forecast_conditions>
+    <forecast_conditions>
+      <day_of_week data="周四"/>
+      <low data="26"/>
+      <high data="28"/>
+      <icon data="/ig/images/weather/chance_of_storm.gif"/>
+      <condition data="可能有暴风雨"/>
+    </forecast_conditions>
+    <forecast_conditions>
+      <day_of_week data="周五"/>
+      <low data="24"/>
+      <high data="27"/>
+      <icon data="/ig/images/weather/thunderstorm.gif"/>
+      <condition data="雷阵雨"/>
+    </forecast_conditions>
+  </weather>
+</xml_api_reply>

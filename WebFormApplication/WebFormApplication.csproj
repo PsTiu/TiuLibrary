@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BCCB1296-34B0-425B-814F-E8BE3980F2BF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebFormApplication</RootNamespace>
+    <AssemblyName>WebFormApplication</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SilverlightApplicationList>
+    </SilverlightApplicationList>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BingImgText.aspx" />
+    <Content Include="ClientBin\SilverlightApplication.xap" />
+    <Content Include="Files\Rss.xml" />
+    <Content Include="HTMLPage1.htm" />
+    <Content Include="IgWeatherTest.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Silverlight.js" />
+    <Content Include="SilverlightApplicationTestPage.aspx" />
+    <Content Include="SilverlightApplicationTestPage.html" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BingImgText.aspx.cs">
+      <DependentUpon>BingImgText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BingImgText.aspx.designer.cs">
+      <DependentUpon>BingImgText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\Rss.ashx.cs">
+      <DependentUpon>Rss.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="IgWeatherTest.aspx.cs">
+      <DependentUpon>IgWeatherTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IgWeatherTest.aspx.designer.cs">
+      <DependentUpon>IgWeatherTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handler\Rss.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tiu.Attributes\Tiu.Attributes.csproj">
+      <Project>{0AF19D83-285F-45FE-B0C0-7782D9230764}</Project>
+      <Name>Tiu.Attributes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tiu.Data\Tiu.Data.csproj">
+      <Project>{D31F27DE-5C00-48F4-B119-E23B623D7A20}</Project>
+      <Name>Tiu.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tiu.DBUtility\Tiu.DBUtility.csproj">
+      <Project>{2365DCDE-56C1-411C-A663-BB2B23D8B523}</Project>
+      <Name>Tiu.DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tiu.Extent\Tiu.Extent.csproj">
+      <Project>{CCE2A63D-CF2F-42E3-9410-F9A4FB7D4A1E}</Project>
+      <Name>Tiu.Extent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tiu.Net\Tiu.Net.csproj">
+      <Project>{A1B955D3-C7EB-417F-9E79-552819DCB340}</Project>
+      <Name>Tiu.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tiu.ThirdpartyApi\Tiu.ThirdpartyApi.csproj">
+      <Project>{75F07C84-0678-4E18-9FC4-367DAEB57B7F}</Project>
+      <Name>Tiu.ThirdpartyApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tiu.Tools\Tiu.Tools.csproj">
+      <Project>{75E5D203-3574-4A3A-B95F-88D6834C5298}</Project>
+      <Name>Tiu.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tiu.Web\Tiu.Web.csproj">
+      <Project>{EBE74EC9-293E-43C7-8BD3-6A25A33C2265}</Project>
+      <Name>Tiu.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65115</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

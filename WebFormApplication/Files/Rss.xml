@@ -1,0 +1,39 @@
+﻿<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <!--required-->
+    <title>W3School Home Page</title>
+    <link>http://www.w3school.com.cn</link>
+    <description>Free web building tutorials</description>
+    <!--optional-->
+    <category>IT/Internet/Web development</category>
+    <cloud domain="www.w3school.com.cn" port="80" path="/RPC" registerProcedure="NotifyMe" protocol="xml-rpc" />
+    <copyright>2008 YK investment. All rights reserved.</copyright>
+    <language>en-us</language>
+    <pubDate>Tue, 10 Jun 2003 04:00:00 GMT</pubDate>
+    <lastBuildDate>Tue, 10 Jun 2003 09:41:01 GMT</lastBuildDate>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <generator>Weblog Editor 2.0</generator>
+    <managingEditor>editor@example.com</managingEditor>
+    <webMaster>webmaster@example.com</webMaster>
+    <input>
+      <title>Input Title</title>
+      <description>Input Desc</description>
+      <name>Input Name</name>
+      <link>Input Link</link>
+    </input>
+    <image>
+      <url>http://www.w3school.com.cn/images/logo.gif</url>
+      <title>W3School.com.cn</title>
+      <link>http://www.w3school.com.cn</link>
+    </image>
+
+    <item>
+      <!--required-->        
+      <title>RSS Tutorial</title>
+      <link>http://www.w3school.com.cn/rss</link>
+      <description>New RSS tutorial on W3School</description>
+      <pubDate>Tue, 03 Jun 2003 09:39:21 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

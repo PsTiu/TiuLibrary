@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tiu.Extent</name>
+    </assembly>
+    <members>
+        <member name="T:System.Data.DataTableExt">
+            <summary>
+            DataTable扩展
+            </summary>
+        </member>
+        <member name="M:System.Data.DataTableExt.ToJson(System.Data.DataTable,System.Int32)">
+            <summary>
+            转为Json字符串（格式{"total":0,"rows":[]"）
+            </summary>
+            <param name="total">总记录数</param>
+            <param name="theObj">扩展对象，DataTable</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Data.DataTableExt.ToJson(System.Data.DataTable)">
+            <summary>
+            转为Json字符串（格式{"total":0,"rows":[]"）
+            </summary>
+            <param name="theObj">扩展对象，DataTable</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tiu.Extent.EnumExt">
+            <summary>
+            枚举扩展
+            </summary>
+        </member>
+        <member name="M:Tiu.Extent.EnumExt.GetDescription(System.Enum)">
+            <summary>
+            获取枚举描述信息
+            </summary>
+            <param name="theObj">扩展对象，枚举</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

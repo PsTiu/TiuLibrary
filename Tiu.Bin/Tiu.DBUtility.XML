@@ -1,0 +1,892 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tiu.DBUtility</name>
+    </assembly>
+    <members>
+        <member name="T:Tiu.DBUtility.AttributeInfoCache">
+            <summary>
+            用于保存实体类特性信息的类（对应一个实体类）
+            </summary>
+        </member>
+        <member name="P:Tiu.DBUtility.AttributeInfoCache.TableAttribute">
+            <summary>
+            表信息
+            </summary>
+        </member>
+        <member name="F:Tiu.DBUtility.AttributeInfos._dic">
+            <summary>
+            用来感觉类名，缓存实体类反射信息的变量
+            </summary>
+        </member>
+        <member name="M:Tiu.DBUtility.AttributeInfos.GetAttributeInfo``1">
+            <summary>
+            获取实体类的放射信息
+            </summary>
+            <typeparam name="T">实体类的类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Tiu.DBUtility.AccessHelper">
+            <summary>
+            Access数据库访问类
+            </summary>
+        </member>
+        <member name="T:Tiu.DBUtility.DBHelper">
+            <summary>
+            数据库访问类基类
+            </summary>
+        </member>
+        <member name="F:Tiu.DBUtility.DBHelper._connectionStr">
+            <summary>
+            数据库链接字符串
+            </summary>
+        </member>
+        <member name="F:Tiu.DBUtility.DBHelper._connection">
+            <summary>
+            数据库连接对象
+            </summary>
+        </member>
+        <member name="F:Tiu.DBUtility.DBHelper._command">
+            <summary>
+            数据库命令对象
+            </summary>
+        </member>
+        <member name="F:Tiu.DBUtility.DBHelper._adapter">
+            <summary>
+            数据适配器对象
+            </summary>
+        </member>
+        <member name="F:Tiu.DBUtility.DBHelper._deafultDataSetName">
+            <summary>
+            默认的DataSet名称
+            </summary>
+        </member>
+        <member name="F:Tiu.DBUtility.DBHelper._defaultDataTableName">
+            <summary>
+            默认的DataTable名称
+            </summary>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="connectionStr">数据库链接字符串</param>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.Close">
+            <summary>
+            关闭数据库链接
+            </summary>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.MakeInParam(System.String,System.Data.DbType,System.Int32,System.Object)">
+            <summary>
+            创建传入的SQL参数
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="dbType">参数类型</param>
+            <param name="size">参数大小</param>
+            <param name="value">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.MakeInParam(System.String,System.Data.DbType,System.Object)">
+            <summary>
+            创建传入的SQL参数（推荐使用）
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="dbType">参数类型</param>
+            <param name="value">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.MakeInParam(System.String,System.Object)">
+            <summary>
+            创建传入的SQL参数
+            </summary>
+            <param name="paramName">参数名</param>       
+            <param name="value">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.MakeOutParam(System.String,System.Data.DbType,System.Int32)">
+            <summary>
+            创建传出的SQL参数
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="dbType">参数类型</param>
+            <param name="size">参数大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.MakeOutParam(System.String,System.Data.DbType)">
+            <summary>
+            创建传出的SQL参数
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="dbType">参数类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSqlReader(System.String)">
+            <summary>
+            执行SQL语句，返回DataReader（注意：使用完DataReader之后要调用Close()方法关闭数据库链接）
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSqlReader(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行SQL语句，返回DataReader（注意：使用完DataReader之后要调用Close()方法关闭数据库链接）
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSqlDataSet(System.String)">
+            <summary>
+            执行SQL语句返回DataSet
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSqlDataSet(System.String,System.String)">
+            <summary>
+            执行SQL语句返回DataSet
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="dataSetName">数据集名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSqlDataSet(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行SQL语句返回DataSet
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSqlDataSet(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter},System.String)">
+            <summary>
+            执行SQL语句返回DataSet
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="parameters">SQL参数</param>
+            <param name="dataSetName">数据集名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSqlDataTable(System.String)">
+            <summary>
+            执行SQL语句返回DataTable
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSqlDataTable(System.String,System.String)">
+            <summary>
+            执行SQL语句返回DataTable
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="tableName">Table名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSqlDataTable(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行SQL语句返回DataTable
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSqlDataTable(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter},System.String)">
+            <summary>
+            执行SQL返回DataTable
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="parameters">SQL参数</param>
+            <param name="tableName">Table名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSqlSingle(System.String)">
+            <summary>
+            执行SQL语句返回首行首列
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSqlSingle(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行SQL语句返回首行首列
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSql(System.String)">
+            <summary>
+            执行SQL语句返回受影响行数
+            </summary>
+            <param name="sqlStr">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSql(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行SQL语句返回受影响行数
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSqls(System.Collections.Generic.IList{System.String})">
+            <summary>
+            执行多条SQL语句事务（非查询语句），（返回受影响行数；0=执行失败，回滚成功；-1=执行失败，回滚失败）
+            </summary>
+            <param name="sqlStrs">SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSqls(System.Collections.Generic.IList{System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter}}})">
+            <summary>
+            执行多条SQL语句事务（非查询语句），（返回受影响行数；0=执行失败，回滚成功；-1=执行失败，回滚失败）
+            </summary>
+            <param name="sqlList">批量执行的SQL语句（key：SQL语句，value：SQL语句的变量）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecSqlReaderFillList``1(System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            执行SQL语句，通过DateReader填充List
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sqlStr">SQL语句</param>
+            <param name="list">List对象</param>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecProcReader(System.String)">
+            <summary>
+            执行存储过程，返回DataReader（注意：使用完DataReader之后要调用Close()方法关闭数据库链接）
+            </summary>
+            <param name="procName">存储过程名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecProcReader(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行存储过程，返回DataReader（注意：使用完DataReader之后要调用Close()方法关闭数据库链接）
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecProcDataSet(System.String)">
+            <summary>
+            执行存储过程返回DataSet
+            </summary>
+            <param name="procName">存储过程名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecProcDataSet(System.String,System.String)">
+            <summary>
+            执行存储过程返回DataSet
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="dataSetName">数据集名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecProcDataSet(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行存储过程返回DataSet
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecProcDataSet(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter},System.String)">
+            <summary>
+            执行存储过程返回DataSet
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <param name="dataSetName">数据集名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecProcDataTable(System.String)">
+            <summary>
+            执行存储过程返回DataTable
+            </summary>
+            <param name="procName">存储过程名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecProcDataTable(System.String,System.String)">
+            <summary>
+            执行存储过程返回DataTable
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="tableName">Table名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecProcDataTable(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行存储过程返回DataTable
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecProcDataTable(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter},System.String)">
+            <summary>
+            执行存储过程返回DataTable
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <param name="tableName">Table名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecProcSingle(System.String)">
+            <summary>
+            执行存储过程返回首行首列
+            </summary>
+            <param name="procName">存储过程名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecProcSingle(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行存储过程返回首行首列
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecProc(System.String)">
+            <summary>
+            执行存储过程返回受影响行数
+            </summary>
+            <param name="procName">存储过程名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecProc(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行存储过程返回受影响行数
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.FilePagerTable(Tiu.Data.PagerTable)">
+            <summary>
+            填充分页查询PagerTable结果
+            </summary>
+            <param name="pageTable">用于填充数据的PagerTable对象</param>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.FilePagerList``1(Tiu.Data.PagerList{``0})">
+            <summary>
+            填充分页查询PagerList结果
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="pagerList">用于填充数据的PagerList对象</param>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.CreatePagerSqlStr(Tiu.Data.IPagerable)">
+            <summary>
+            创建分页查询语句
+            </summary>
+            <param name="pager">分页接口对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.AddModelToDB``1(``0)">
+            <summary>
+            添加实体到数据库
+            </summary>
+            <typeparam name="T">数据表实体类</typeparam>
+            <param name="model">实体类对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.AddModelToDbByParms``1(``0,System.String)">
+            <summary>
+            通过SQL参数添加实体到数据库
+            </summary>
+            <typeparam name="T">数据表实体类</typeparam>
+            <param name="model">实体类对象</param>
+            <param name="parmPrefix">参数前缀（如MsSqla、Access是"@"，Oracle是":",Mysql是"?"）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.UpdateModelToDB``1(``0)">
+            <summary>
+            更新实体到数据库
+            </summary>
+            <typeparam name="T">数据表实体类</typeparam>
+            <param name="model">实体类对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.UpdateModelToDbByParms``1(``0,System.String)">
+            <summary>
+            通过SQL参数更新实体到数据库
+            </summary>
+            <typeparam name="T">数据表实体类</typeparam>
+            <param name="model">实体类对象</param>
+            <param name="parmPrefix">参数前缀（如MsSqla、Access是"@"，Oracle是":",Mysql是"?"）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.FillModelFromDB``1(``0)">
+            <summary>
+            填充实体类
+            </summary>
+            <typeparam name="T">数据表实体类</typeparam>
+            <param name="model">被填充的实体类对象（要预先设置好ID）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.SelectListFromDB``1">
+            <summary>
+            获取实体类列表
+            </summary>
+            <typeparam name="T">数据表实体类</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.SelectListFromDB``1(System.Int32)">
+            <summary>
+            获取实体类列表
+            </summary>
+            <typeparam name="T">数据表实体类</typeparam>
+            <param name="top">前top条记录（设置为小于1表示查询全部记录）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.SelectListFromDB``1(System.String)">
+            <summary>
+            获取实体类列表
+            </summary>
+            <typeparam name="T">数据表实体类</typeparam>
+            <param name="where">查询条件（不用带where）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.SelectListFromDB``1(System.Int32,System.String)">
+            <summary>
+            获取实体类列表
+            </summary>
+            <typeparam name="T">数据表实体类</typeparam>
+            <param name="top">前top条记录（设置为小于1表示查询全部记录）</param>
+            <param name="orderby">排序语句（不用带order by，需要表名字段名和排序方式，如"colName desc"）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.SelectListFromDB``1(System.String,System.String)">
+            <summary>
+            获取实体类列表
+            </summary>
+            <typeparam name="T">数据表实体类</typeparam>
+            <param name="where">查询条件（不用带where）</param>
+            <param name="orderby">排序语句（不用带order by，需要表名字段名和排序方式，如"colName desc"）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.SelectListFromDB``1(System.Int32,System.String,System.String)">
+            <summary>
+            获取实体类列表
+            </summary>
+            <typeparam name="T">数据表实体类</typeparam>
+            <param name="top">前top条记录（设置为小于1表示查询全部记录）</param>
+            <param name="where">查询条件（不用带where）</param>
+            <param name="orderby">排序语句（不用带order by，需要表名字段名和排序方式，如"colName desc"）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.SetConnectionStr(System.String)">
+            <summary>
+            设置数据库链接字符串
+            </summary>
+            <param name="connectionStr">数据库链接字符串</param>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.Open">
+            <summary>
+            打开数据库连接
+            </summary>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.AddDbParameters(System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            添加SQL参数（添加到数据库命令对象中）
+            </summary>
+            <param name="parameters"></param>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.MakeParam``1(System.String,System.Data.ParameterDirection,System.Data.DbType,System.Int32,System.Object)">
+            <summary>
+            创建SQL参数
+            </summary>
+            <typeparam name="TParam">SQL参数类型</typeparam>
+            <param name="paramName">参数名</param>
+            <param name="direction">参数传送方向</param>
+            <param name="dbType">参数类型</param>
+            <param name="size">参数大小</param>
+            <param name="value">参数值（作为Output参数该值没作用）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecuteReader(System.Data.CommandType,System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行SQL，返回DataReader（注意：使用完DataReader之后要调用Close()方法关闭数据库链接）
+            </summary>
+            <param name="commandType">SQL命令类型</param>
+            <param name="commandText">SQL命令</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecuteDataSet(System.Data.CommandType,System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter},System.String)">
+            <summary>
+            执行SQL返回DataSet
+            </summary>
+            <param name="commandType">SQL命令类型</param>
+            <param name="commandText">SQL命令</param>
+            <param name="parameters">SQL参数</param>
+            <param name="dataSetName">数据集名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecuteDataTable(System.Data.CommandType,System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter},System.String)">
+            <summary>
+            执行SQL返回DataTable
+            </summary>
+            <param name="commandType">SQL命令类型</param>
+            <param name="commandText">SQL命令</param>
+            <param name="parameters">SQL参数</param>
+            <param name="tableName">Table名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecuteSingle(System.Data.CommandType,System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行SQL返回首行首列
+            </summary>
+            <param name="commandType">SQL命令类型</param>
+            <param name="commandText">SQL命令</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelper.ExecuteSql(System.Data.CommandType,System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行SQL语句返回受影响行数
+            </summary>
+            <param name="commandType">SQL命令类型</param>
+            <param name="commandText">SQL命令</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="P:Tiu.DBUtility.DBHelper.ConnectionStr">
+            <summary>
+            数据库链接字符串
+            </summary>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="connectionStr">数据库链接字符串</param>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.MakeInParam(System.String,System.Data.DbType,System.Int32,System.Object)">
+            <summary>
+            创建传入的SQL参数
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="dbType">参数类型</param>
+            <param name="size">参数大小</param>
+            <param name="value">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.MakeOutParam(System.String,System.Data.DbType,System.Int32)">
+            <summary>
+            创建传出的SQL参数
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="dbType">参数类型</param>
+            <param name="size">参数大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.ExecSqlReader(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行SQL语句，返回DataReader（注意：使用完DataReader之后要调用Close()方法关闭数据库链接）
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.ExecSqlDataSet(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter},System.String)">
+            <summary>
+            执行SQL语句返回DataSet
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="parameters">SQL参数</param>
+            <param name="dataSetName">数据集名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.ExecSqlDataTable(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter},System.String)">
+            <summary>
+            执行SQL语句返回DataTable
+            </summary>
+            <param name="sqlStr">SQL命令</param>
+            <param name="parameters">SQL参数</param>
+            <param name="tableName">Table名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.ExecSqlSingle(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行SQL语句返回首行首列
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.ExecSql(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行SQL语句返回受影响行数
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.ExecProcReader(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行存储过程，返回DataReader（注意：使用完DataReader之后要调用Close()方法关闭数据库链接）
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.ExecProcDataSet(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter},System.String)">
+            <summary>
+            执行存储过程返回DataSet
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <param name="dataSetName">数据集名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.ExecProcDataTable(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter},System.String)">
+            <summary>
+            执行存储过程返回DataTable
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <param name="tableName">Table名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.ExecProcSingle(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行存储过程返回首行首列
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.ExecProc(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行存储过程返回受影响行数
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.FilePagerTable(Tiu.Data.PagerTable)">
+            <summary>
+            填充分页查询PagerTable结果
+            </summary>
+            <param name="pagerTable">用于填充数据的PagerTable对象</param>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.FilePagerList``1(Tiu.Data.PagerList{``0})">
+            <summary>
+            填充分页查询PagerList结果
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="pagerList">用于填充数据的PagerList对象</param>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.CreatePagerSqlStr(Tiu.Data.IPagerable)">
+            <summary>
+            创建分页查询的SQL语句
+            </summary>
+            <param name="pager">分页接口对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.AddModelToDB``1(``0)">
+            <summary>
+            添加实体到数据库
+            </summary>
+            <typeparam name="T">数据表实体类</typeparam>
+            <param name="model">实体类对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.AccessHelper.UpdateModelToDB``1(``0)">
+            <summary>
+            更新实体到数据库
+            </summary>
+            <typeparam name="T">数据表实体类</typeparam>
+            <param name="model">实体类对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tiu.DBUtility.HelperType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="F:Tiu.DBUtility.HelperType.SqlServer">
+            <summary>
+            SqlServer
+            </summary>
+        </member>
+        <member name="F:Tiu.DBUtility.HelperType.Access">
+            <summary>
+            Access
+            </summary>
+        </member>
+        <member name="F:Tiu.DBUtility.HelperType.Oracle">
+            <summary>
+            Oracle
+            </summary>
+        </member>
+        <member name="F:Tiu.DBUtility.HelperType.MySql">
+            <summary>
+            MySql
+            </summary>
+        </member>
+        <member name="T:Tiu.DBUtility.DBHelperCreater">
+            <summary>
+            数据库访问类创建者
+            </summary>
+        </member>
+        <member name="M:Tiu.DBUtility.DBHelperCreater.CreateDBHelper(Tiu.DBUtility.HelperType,System.String)">
+            <summary>
+            获取一个数据库帮助类
+            </summary>
+            <param name="helperType">数据库类型</param>
+            <param name="connectionStr">链接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tiu.DBUtility.SqlServerHelper">
+            <summary>
+            SqlServer数据库访问类
+            </summary>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="connectionStr">数据库链接字符串</param>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.MakeInParam(System.String,System.Data.DbType,System.Int32,System.Object)">
+            <summary>
+            创建传入的SQL参数
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="dbType">参数类型</param>
+            <param name="size">参数大小</param>
+            <param name="value">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.MakeOutParam(System.String,System.Data.DbType,System.Int32)">
+            <summary>
+            创建传出的SQL参数
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="dbType">参数类型</param>
+            <param name="size">参数大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.ExecSqlReader(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行SQL语句，返回DataReader（注意：使用完DataReader之后要调用Close()方法关闭数据库链接）
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.ExecSqlDataSet(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter},System.String)">
+            <summary>
+            执行SQL语句返回DataSet
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="parameters">SQL参数</param>
+            <param name="dataSetName">数据集名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.ExecSqlDataTable(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter},System.String)">
+            <summary>
+            执行SQL语句返回DataTable
+            </summary>
+            <param name="sqlStr">SQL命令</param>
+            <param name="parameters">SQL参数</param>
+            <param name="tableName">Table名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.ExecSqlSingle(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行SQL语句返回首行首列
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.ExecSql(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行SQL语句返回受影响行数
+            </summary>
+            <param name="sqlStr">SQL语句</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.ExecProcReader(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行存储过程，返回DataReader（注意：使用完DataReader之后要调用Close()方法关闭数据库链接）
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.ExecProcDataSet(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter},System.String)">
+            <summary>
+            执行存储过程返回DataSet
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <param name="dataSetName">数据集名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.ExecProcDataTable(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter},System.String)">
+            <summary>
+            执行存储过程返回DataTable
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <param name="tableName">Table名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.ExecProcSingle(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行存储过程返回首行首列
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.ExecProc(System.String,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行存储过程返回受影响行数
+            </summary>
+            <param name="procName">存储过程名</param>
+            <param name="parameters">SQL参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.FilePagerTable(Tiu.Data.PagerTable)">
+            <summary>
+            填充分页查询PagerTable结果
+            </summary>
+            <param name="pagerTable">PagerTable对象</param>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.FilePagerList``1(Tiu.Data.PagerList{``0})">
+            <summary>
+            填充分页查询PagerList结果
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="pagerList">PagerList对象</param>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.CreatePagerSqlStr(Tiu.Data.IPagerable)">
+            <summary>
+            创建分页查询语句
+            </summary>
+            <param name="pager">分页接口对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.AddModelToDB``1(``0)">
+            <summary>
+            添加实体到数据库
+            </summary>
+            <typeparam name="T">数据表实体类</typeparam>
+            <param name="model">实体类对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.DBUtility.SqlServerHelper.UpdateModelToDB``1(``0)">
+            <summary>
+            更新实体到数据库
+            </summary>
+            <typeparam name="T">数据表实体类</typeparam>
+            <param name="model">实体类对象</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

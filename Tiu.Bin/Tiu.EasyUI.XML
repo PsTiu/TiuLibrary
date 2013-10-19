@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tiu.EasyUI</name>
+    </assembly>
+    <members>
+        <member name="T:Tiu.EasyUI.EasyUiTreeNodeCollection`1">
+            <summary>
+            EasyUI树节点集合
+            </summary>
+        </member>
+        <member name="T:Tiu.EasyUI.IEasyUiJsonData">
+            <summary>
+            Json数据借口
+            </summary>
+        </member>
+        <member name="M:Tiu.EasyUI.IEasyUiJsonData.ToJson">
+            <summary>
+            转Json
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Tiu.EasyUI.EasyUiTreeNodeCollection`1._owner">
+            <summary>
+            集合的持有者
+            </summary>
+        </member>
+        <member name="M:Tiu.EasyUI.EasyUiTreeNodeCollection`1.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:Tiu.EasyUI.EasyUiTreeNodeCollection`1.#ctor(Tiu.EasyUI.EasyUiTreeNode{`0})">
+            <summary>
+            构造方法
+            </summary>
+            <param name="owner">集合的持有者</param>
+        </member>
+        <member name="M:Tiu.EasyUI.EasyUiTreeNodeCollection`1.ToJson">
+            <summary>
+            获取树状Json字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.EasyUI.EasyUiTreeNodeCollection`1.Add(Tiu.EasyUI.EasyUiTreeNode{`0})">
+            <summary>
+            添加节点
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="T:Tiu.EasyUI.Attributes.DataGridColumnAttribute">
+            <summary>
+            DataGrid列特性
+            </summary>
+        </member>
+        <member name="F:Tiu.EasyUI.Attributes.DataGridColumnAttribute._columnName">
+            <summary>
+            数据列名
+            </summary>
+        </member>
+        <member name="F:Tiu.EasyUI.Attributes.DataGridColumnAttribute._showHashCode">
+            <summary>
+            是否显示哈希代码
+            </summary>
+        </member>
+        <member name="M:Tiu.EasyUI.Attributes.DataGridColumnAttribute.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:Tiu.EasyUI.Attributes.DataGridColumnAttribute.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="columnName">数据列名</param>
+        </member>
+        <member name="M:Tiu.EasyUI.Attributes.DataGridColumnAttribute.#ctor(System.String,System.Boolean)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="columnName">数据列名</param>
+            <param name="showHashCode">是否显示哈希代码</param>
+        </member>
+        <member name="P:Tiu.EasyUI.Attributes.DataGridColumnAttribute.ColumnName">
+            <summary>
+            数据列名
+            </summary>
+        </member>
+        <member name="P:Tiu.EasyUI.Attributes.DataGridColumnAttribute.ShowHashCode">
+            <summary>
+            是否显示哈希代码（默认为false，一般如果属性是枚举类型的话需要设置为true）
+            </summary>
+        </member>
+        <member name="T:Tiu.EasyUI.EasyUiTreeNode`1">
+            <summary>
+            EasyUI树节点
+            </summary>
+            <typeparam name="ModelT">Model类</typeparam>
+        </member>
+        <member name="M:Tiu.EasyUI.EasyUiTreeNode`1.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="F:Tiu.EasyUI.EasyUiTreeNode`1._childNodes">
+            <summary>
+            子级节点集合
+            </summary>
+        </member>
+        <member name="M:Tiu.EasyUI.EasyUiTreeNode`1.ToJson">
+            <summary>
+            获取节点Json
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.EasyUI.EasyUiTreeNode`1.GetAttributesJson">
+            <summary>
+            获取实体类属性Json
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Tiu.EasyUI.EasyUiTreeNode`1.Id">
+            <summary>
+            节点id
+            </summary>
+        </member>
+        <member name="P:Tiu.EasyUI.EasyUiTreeNode`1.IconCls">
+            <summary>
+            节点图标
+            </summary>
+        </member>
+        <member name="P:Tiu.EasyUI.EasyUiTreeNode`1.Model">
+            <summary>
+            节点对应的模型对象
+            </summary>
+        </member>
+        <member name="P:Tiu.EasyUI.EasyUiTreeNode`1.Parent">
+            <summary>
+            父级节点
+            </summary>
+        </member>
+        <member name="P:Tiu.EasyUI.EasyUiTreeNode`1.ChildNodes">
+            <summary>
+            子级节点集合
+            </summary>
+        </member>
+        <member name="T:Tiu.EasyUI.EasyUiDataGrid">
+            <summary>
+            EasyUiDataGrid
+            </summary>
+        </member>
+        <member name="M:Tiu.EasyUI.EasyUiDataGrid.#ctor(System.Data.DataTable)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="dataSource">数据源</param>
+        </member>
+        <member name="M:Tiu.EasyUI.EasyUiDataGrid.#ctor(System.Data.DataTable,System.Int32)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="dataSource">数据源</param>
+            <param name="total">数据源</param>
+        </member>
+        <member name="M:Tiu.EasyUI.EasyUiDataGrid.ToJson">
+            <summary>
+            转成Json数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Tiu.EasyUI.EasyUiDataGrid`1">
+            <summary>
+            EasyUiDataGrid
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Tiu.EasyUI.EasyUiDataGrid`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            构造方法
+            </summary>
+            <param name="dataSource">数据源</param>
+        </member>
+        <member name="M:Tiu.EasyUI.EasyUiDataGrid`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Int32)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="dataSource">数据源</param>
+            <param name="total">数据源</param>
+        </member>
+        <member name="M:Tiu.EasyUI.EasyUiDataGrid`1.GetDataGridColumnAttribute(System.Reflection.PropertyInfo)">
+            <summary>
+            根据PropertyInfo获取列名，没有设置DataGridColumnAttribute特性的话返回null
+            </summary>
+            <param name="property">PropertyInfo</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.EasyUI.EasyUiDataGrid`1.ToJson">
+            <summary>
+            转成Json数据
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

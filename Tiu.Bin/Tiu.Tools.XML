@@ -1,0 +1,477 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tiu.Tools</name>
+    </assembly>
+    <members>
+        <member name="T:Tiu.Tools.StringTool">
+            <summary>
+            字符串工具
+            </summary>
+        </member>
+        <member name="M:Tiu.Tools.StringTool.ReplaceStrHtmlChar(System.String)">
+            <summary>
+            把字符串中的符号转为Html格式的字符
+            </summary>
+            <param name="strSrc">源字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.StringTool.ReplaceAngleBrackets(System.String)">
+            <summary>
+            替换尖括号（左尖括号="&lt;" 右尖括号="&gt;"）
+            </summary>
+            <param name="strSrc">源字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.StringTool.FilterSqlChars(System.String)">
+            <summary>
+            过滤字符串中带有的关键字和符号（转为全角）
+            </summary>
+            <param name="strSrc">源字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.StringTool.ToMD5(System.String)">
+            <summary>
+            返回MD5加密后的字符串
+            </summary>
+            <param name="str">原字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.StringTool.GetMiddleString(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            在源字符串中查找首个以a字符串开始、以b字符串结尾的字符串
+            </summary>
+            <param name="strSrc">源字符串</param>
+            <param name="a"></param>
+            <param name="b"></param>
+            <param name="includeAandB">是否返回a字符串和b字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.StringTool.GetMiddleString(System.String,System.String,System.String)">
+            <summary>
+            在源字符串中查找首个以a字符串开始、以b字符串结尾的字符串（返回结果不包括a字符串和b字符串）
+            </summary>
+            <param name="strSrc">源字符串</param>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.StringTool.GetMiddleStrings(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            在源字符串中查找以a字符串开始、以b字符串结尾的字符串
+            </summary>
+            <param name="strSrc">源字符串</param>
+            <param name="a"></param>
+            <param name="b"></param>
+            <param name="includeAandB">是否返回a字符串和b字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.StringTool.GetMiddleStrings(System.String,System.String,System.String)">
+            <summary>
+            在源字符串中查找以a字符串开始、以b字符串结尾的字符串
+            </summary>
+            <param name="strSrc">源字符串</param>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.StringTool.CreateGuid(System.Boolean,System.Boolean)">
+            <summary>
+            生成Guid字符串
+            </summary>
+            <param name="isUper">字母是否大写</param>
+            <param name="onlyLetter">是否只生成字母（会生成36位，32为的数字和字母加四个横杠；设置为true的话就没有横杠）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.StringTool.CreateDateTimeString">
+            <summary>
+            按照当前时间生成十八位字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.StringTool.CutChars(System.String,System.Int32,System.String)">
+            <summary>
+            截取字符串的前几个字符
+            </summary>
+            <param name="srcStr">源字符串</param>
+            <param name="showCharNumber">截取出来的字符数</param>
+            <param name="ellipsis">源字符串中超出部分要显示成的文本（如"…"）</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tiu.Tools.EnumTool">
+            <summary>
+            枚举工具
+            </summary>
+        </member>
+        <member name="M:Tiu.Tools.EnumTool.GetEnumDescription(System.Object)">
+            <summary>
+            获取枚举描述信息
+            </summary>
+            <param name="e">枚举值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.EnumTool.Parst``1(System.String)">
+            <summary>
+            字符串转为枚举（没有异常处理）
+            </summary>
+            <typeparam name="T">枚举类型</typeparam>
+            <param name="value">字符串的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.EnumTool.Parst``1(System.Object)">
+            <summary>
+            对象串转为枚举（没有异常处理）
+            </summary>
+            <typeparam name="T">枚举类型</typeparam>
+            <param name="value">对象的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.EnumTool.Parst``1(System.String,``0)">
+            <summary>
+            字符串转为枚举
+            </summary>
+            <typeparam name="T">枚举类型</typeparam>
+            <param name="value">字符串的值</param>
+            <param name="defauleValue">转换失败返回的默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.EnumTool.Parst``1(System.Object,``0)">
+            <summary>
+            对象转为枚举
+            </summary>
+            <typeparam name="T">枚举类型</typeparam>
+            <param name="value">对象的值</param>
+            <param name="defauleValue">转换失败返回的默认值</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tiu.Tools.ValidateCode">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="F:Tiu.Tools.ValidateCode._codeString">
+            <summary>
+            验证码字符串
+            </summary>
+        </member>
+        <member name="F:Tiu.Tools.ValidateCode._codeImg">
+            <summary>
+            验证码图片
+            </summary>
+        </member>
+        <member name="F:Tiu.Tools.ValidateCode._codeStream">
+            <summary>
+            验证码输出流
+            </summary>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.#ctor(Tiu.Tools.ValidateCode.ValidateCodeConfiger)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="configer">验证码配置</param>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.Reload">
+            <summary>
+            重新加载缩略图
+            </summary>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.GetString">
+            <summary>
+            获取验证码字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.GetImg">
+            <summary>
+            获取验证码图片
+            </summary>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.GetStream">
+            <summary>
+            获取验证码输出流
+            </summary>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.GetByteArray">
+            <summary>
+            获取Byte数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.AmendConfiger">
+            <summary>
+            修正配置信息
+            </summary>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.CreateCode">
+            <summary>
+            创建验证码
+            </summary>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.GetEnNumCodeString">
+            <summary>
+             获取英文、数字字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.GetCnCodeString">
+            <summary>
+            获取中文验证码字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.CreateCnCode">
+            <summary>
+            产生随机中文汉字编码
+            </summary>
+            <param name="strlength"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.CreateImages">
+            <summary>
+            创建验证码图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.GetCodeStream">
+            <summary>
+            获取验证码输出流
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Tiu.Tools.ValidateCode.Configer">
+            <summary>
+            验证码配置
+            </summary>
+        </member>
+        <member name="T:Tiu.Tools.ValidateCode.En_CharKind">
+            <summary>
+            字符类型
+            </summary>
+        </member>
+        <member name="F:Tiu.Tools.ValidateCode.En_CharKind.Chinese">
+            <summary>
+            汉字（默认，不可和其他字符类型枚举合用）
+            </summary>
+        </member>
+        <member name="F:Tiu.Tools.ValidateCode.En_CharKind.Upper">
+            <summary>
+            大写字母
+            </summary>
+        </member>
+        <member name="F:Tiu.Tools.ValidateCode.En_CharKind.Lower">
+            <summary>
+            小写字母
+            </summary>
+        </member>
+        <member name="F:Tiu.Tools.ValidateCode.En_CharKind.Number">
+            <summary>
+            数字
+            </summary>
+        </member>
+        <member name="T:Tiu.Tools.ValidateCode.ValidateCodeConfiger">
+            <summary>
+            验证码配置信息
+            </summary>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.ValidateCodeConfiger.GetInstance">
+            <summary>
+            获取一个验证码配置信息实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Tiu.Tools.ValidateCode.ValidateCodeConfiger.FontSize">
+            <summary>
+            字体大小
+            </summary>
+        </member>
+        <member name="P:Tiu.Tools.ValidateCode.ValidateCodeConfiger.CharSpacing">
+            <summary>
+            字符间隔
+            </summary>
+        </member>
+        <member name="P:Tiu.Tools.ValidateCode.ValidateCodeConfiger.Width">
+            <summary>
+            图片长
+            </summary>
+        </member>
+        <member name="P:Tiu.Tools.ValidateCode.ValidateCodeConfiger.Height">
+            <summary>
+            图片宽
+            </summary>
+        </member>
+        <member name="P:Tiu.Tools.ValidateCode.ValidateCodeConfiger.CharNum">
+            <summary>
+            字符个数
+            </summary>
+        </member>
+        <member name="P:Tiu.Tools.ValidateCode.ValidateCodeConfiger.CharKind">
+            <summary>
+            字符类型
+            </summary>
+        </member>
+        <member name="P:Tiu.Tools.ValidateCode.ValidateCodeConfiger.Noise">
+            <summary>
+            噪点（线）数
+            </summary>
+        </member>
+        <member name="P:Tiu.Tools.ValidateCode.ValidateCodeConfiger.BackgroundColor">
+            <summary>
+            背景颜色
+            </summary>
+        </member>
+        <member name="P:Tiu.Tools.ValidateCode.ValidateCodeConfiger.BorderColor">
+            <summary>
+            边框颜色
+            </summary>
+        </member>
+        <member name="T:Tiu.Tools.ValidateCode.NoiseLine">
+            <summary>
+            背景噪线
+            </summary>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.NoiseLine.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Tiu.Tools.ValidateCode.NoiseLine.GetInstance">
+            <summary>
+            获取一个背景噪线实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Tiu.Tools.ValidateCode.NoiseLine.BorderWidth">
+            <summary>
+            线的宽度
+            </summary>
+        </member>
+        <member name="P:Tiu.Tools.ValidateCode.NoiseLine.BorderColor">
+            <summary>
+            线的颜色
+            </summary>
+        </member>
+        <member name="P:Tiu.Tools.ValidateCode.NoiseLine.Count">
+            <summary>
+            线的数量
+            </summary>
+        </member>
+        <member name="T:Tiu.Tools.IOTools">
+            <summary>
+            IO工具类
+            </summary>
+        </member>
+        <member name="M:Tiu.Tools.IOTools.CheckDirectoryExist(System.String,System.Boolean)">
+            <summary>
+            检测目录是否存在
+            </summary>
+            <param name="path">目录的物理路径</param>
+            <param name="createWhenNotExist">如果不存在，是否创建</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.IOTools.ReadFileText(System.String,System.Text.Encoding)">
+            <summary>
+            以指定编码读取文件内容，文件不存在返回null
+            </summary>
+            <param name="path">文件的物理路径</param>
+            <param name="encoding">编码格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.IOTools.ReadFileText(System.String)">
+            <summary>
+            以默认编码读取文件内容，文件不存在返回null
+            </summary>
+            <param name="path">文件的物理路径</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tiu.Tools.ConvertTool">
+            <summary>
+            类型转换工具
+            </summary>
+        </member>
+        <member name="M:Tiu.Tools.ConvertTool.DataTableToJson(System.Data.DataTable)">
+            <summary>
+            DataTable转为Json字符串（格式{"total":0,"rows":[]"）
+            </summary>
+            <param name="dataTable">DataTable对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.ConvertTool.DataTableToJson(System.Int32,System.Data.DataTable)">
+            <summary>
+            DataTable转为Json字符串（格式{"total":0,"rows":[]"）
+            </summary>
+            <param name="total">总记录数</param>
+            <param name="dataTable">DataTable对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tiu.Tools.AttributesTool">
+            <summary>
+            类型工具类
+            </summary>
+        </member>
+        <member name="M:Tiu.Tools.AttributesTool.GetAttributeInClass``2">
+            <summary>
+            获取指定类的指定特性（包括基类的特性）
+            </summary>
+            <typeparam name="ClassT">指定的类</typeparam>
+            <typeparam name="AttT">要获取的特性</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.AttributesTool.GetAttributeInClass``2(System.Boolean)">
+            <summary>
+            获取指定类的指定特性
+            </summary>
+            <typeparam name="ClassT">指定的类</typeparam>
+            <typeparam name="AttT">要获取的特性</typeparam>
+            <param name="inherit">是否继承，即是否包括基类的特性</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.AttributesTool.GetAttributeByType``1(System.Type)">
+            <summary>
+            获取指定类型的指定特性（包括基类的特性）
+            </summary>
+            <typeparam name="AttT">要获取的特性</typeparam>
+            <param name="objType">类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.AttributesTool.GetAttributeByType``1(System.Type,System.Boolean)">
+            <summary>
+            获取指定类型的指定特性
+            </summary>
+            <typeparam name="AttT">要获取的特性</typeparam>
+            <param name="objType">类型</param>
+            <param name="inherit">是否继承，即是否包括基类的特性</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.AttributesTool.GetAttributeByPropertyInfo``1(System.Reflection.PropertyInfo)">
+            <summary>
+            通过属性信息PropertyInfo获取类型特性
+            </summary>
+            <typeparam name="AttT">要获取的特性</typeparam>
+            <param name="pi">属性信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.AttributesTool.GetAttributeByPropertyInfo``1(System.Reflection.PropertyInfo,System.Boolean)">
+            <summary>
+            通过属性信息PropertyInfo获取类型特性
+            </summary>
+            <typeparam name="AttT">要获取的特性</typeparam>
+            <param name="pi">属性信息</param>
+            <param name="inherit">是否继承</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Tools.AttributesTool.GetAttributeInProperty``2(System.String)">
+            <summary>
+            获取指定类型指定属性的指定特性（既：在ClassT类中，获取名为propertyName的字段的AttT特性）
+            </summary>
+            <typeparam name="ClassT">指定的类</typeparam>
+            <typeparam name="AttT">要获取的特性</typeparam>
+            <param name="propertyName">属性名称</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

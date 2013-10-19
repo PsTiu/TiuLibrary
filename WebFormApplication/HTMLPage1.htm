@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var cookieSaveSecond = 30;
+        
+        // 设置Cookie
+        function SetCookie() {
+            var value = document.getElementById("txtText").value;
+            var cookieName = document.getElementById("txtName").value;
+
+            var exp = new Date();
+            exp.setTime(exp.getTime() + cookieSaveSecond * 1000);
+            document.cookie = cookieName + "=" + escape(value) + ";expires=" + exp.toGMTString();
+            alert("设置成功！");
+        }
+
+        // 显示Cookie
+        function ShowCookie() {
+            var cookieName = document.getElementById("txtName").value;
+
+            var arr = document.cookie.match(new RegExp("(^| )" + cookieName + "=([^;]*)(;|$)"));
+            if (arr != null) {
+                alert(unescape(arr[2]));
+            }
+            else {
+                alert("读取不到，可能已经失效！");
+            }
+        }
+    </script>
+</head>
+<body>
+    N:<input type="text" value="" id="txtName" />
+    V:<input type="text" value="" id="txtText" />
+    <input type="button" onclick="SetCookie()" value="设置Cookie" />
+    <input type="button" onclick="ShowCookie()" value="显示Cookie" />
+</body>
+</html>

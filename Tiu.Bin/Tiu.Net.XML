@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tiu.Net</name>
+    </assembly>
+    <members>
+        <member name="T:Tiu.Net.EMail">
+            <summary>  
+            邮件类  
+            </summary>  
+        </member>
+        <member name="F:Tiu.Net.EMail._mailMessage">
+            <summary>
+            邮件信息对象
+            </summary>
+        </member>
+        <member name="F:Tiu.Net.EMail._smtpClient">
+            <summary>
+            SMTP客户端对象
+            </summary>
+        </member>
+        <member name="F:Tiu.Net.EMail.password">
+            <summary>
+            发件人密码
+            </summary>
+        </member>
+        <member name="M:Tiu.Net.EMail.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>  
+            构造函数
+            </summary>  
+            <param name="to">收件人地址</param>  
+            <param name="from">发件人地址</param>  
+            <param name="body">邮件正文</param>  
+            <param name="title">邮件的主题</param>  
+            <param name="pwd">发件人密码</param>  
+        </member>
+        <member name="M:Tiu.Net.EMail.Attachments(System.String)">
+            <summary>  
+            添加附件  
+            <param name="paths">附件路径（多个，用","隔开）</param>
+            </summary>  
+        </member>
+        <member name="M:Tiu.Net.EMail.SendAsync(System.Net.Mail.SendCompletedEventHandler)">
+            <summary>  
+            异步发送邮件  
+            </summary>  
+            <param name="completedMethod">发送邮件完成时的回调</param>  
+        </member>
+        <member name="M:Tiu.Net.EMail.Send(System.Int32)">
+            <summary>  
+            发送邮件  
+            <param name="port">指定发送邮件端口</param>
+            </summary>  
+        </member>
+        <member name="M:Tiu.Net.EMail.Send">
+            <summary>  
+            发送邮件  
+            </summary>  
+        </member>
+        <member name="T:Tiu.Net.FTPClient">
+            <summary>
+            FTP操作类
+            </summary>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="requestUriString">访问的FTP地址（可以是FTP的某个目录的路径）</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="requestUriString">访问的FTP地址（可以是FTP的某个目录的路径）</param>
+            <param name="userName">登录的用户名（不需要用户名的话值为""）</param>
+            <param name="password">登录的密码 （不需要密码的话值为""）</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.OpenRequest(System.String,System.String)">
+            <summary>
+            创建FtpWebRequest
+            </summary>
+            <param name="uriString">FTP路径</param>
+            <param name="method">FTP方法</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.OpenResponse(System.String,System.String)">
+            <summary>
+            返回FtpWebResponse
+            </summary>
+            <param name="uriString">FTP路径</param>
+            <param name="method">FTP方法</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.MakeDirectory(System.String)">
+            <summary>
+            创建目录
+            </summary>
+            <param name="directoryPath">要创建的目录名称</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.RemoveDirectory(System.String)">
+            <summary>
+            删除目录
+            </summary>
+            <param name="directoryPath">要删除的目录名称</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.Rename(System.String,System.String)">
+            <summary>
+            重命名文件
+            </summary>
+            <param name="originalFileName">原文件名</param>
+            <param name="newFileName">新文件名</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.UploadFile(System.String)">
+            <summary>
+            上传文件到服务器
+            </summary>
+            <param name="localFullPath">要上传的本地文件全路径</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.UploadFile(System.String,System.Boolean)">
+            <summary>
+            上传文件到服务器
+            </summary>
+            <param name="localFullPath">要上传的本地文件全路径</param>
+            <param name="overWriteFile">是否要重写服务器上的文件</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.UploadFile(System.String,System.String)">
+            <summary>
+            上传文件到服务器
+            </summary>
+            <param name="localFullPath">要上传的本地文件全路径</param>
+            <param name="remoteFileName">上传后文件重命名为</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.UploadFile(System.String,System.String,System.Boolean)">
+            <summary>
+            上传文件到服务器
+            </summary>
+            <param name="localFullPath">要上传的本地文件全路径</param>
+            <param name="remoteFileName">上传后文件重命名为</param>
+            <param name="overWriteFile">是否要重写服务器上的文件</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.UploadFile(System.Byte[],System.String)">
+            <summary>
+            上传文件到服务器
+            </summary>
+            <param name="fileBytes">上传文件的字节流</param>
+            <param name="remoteFileName">上传后文件重命名为</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.UploadFile(System.Byte[],System.String,System.Boolean)">
+            <summary>
+            上传文件到服务器
+            </summary>
+            <param name="fileBytes">上传文件的字节流</param>
+            <param name="remoteFileName">上传后文件重命名为</param>
+            <param name="overWriteFile">是否要重写服务器上的文件</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.DownloadFile(System.String,System.String)">
+            <summary>
+            下载服务器文件到本地
+            </summary>
+            <param name="remoteFileName">要下载的服务器文件名</param>
+            <param name="localPath">下载到本地的路径</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.DownloadFile(System.String,System.String,System.Boolean)">
+            <summary>
+            下载服务器文件到本地
+            </summary>
+            <param name="remoteFileName">要下载的服务器文件名</param>
+            <param name="localPath">下载到本地的路径</param>
+            <param name="overWriteFile">是否要重写本地的文件</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.DownloadFile(System.String,System.String,System.String)">
+            <summary>
+            下载服务器文件到本地
+            </summary>
+            <param name="remoteFileName">要下载的服务器文件名</param>
+            <param name="localPath">下载到本地的路径</param>
+            <param name="localFileName">下载到本地的文件重命名为</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.DownloadFile(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            下载服务器文件到本地
+            </summary>
+            <param name="remoteFileName">要下载的服务器文件名</param>
+            <param name="localPath">下载到本地的路径</param>
+            <param name="localFileName">下载到本地的文件重命名为</param>
+            <param name="overWriteFile">是否要重写本地的文件</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.DownloadFile(System.String)">
+            <summary>
+            下载服务器文件到本地 ** 
+            </summary>
+            <param name="fileVPath">要下载的服务器文件路径（相对于当前访问的目录）</param>
+            <returns>文件的字节流</returns>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.DeleteFile(System.String,System.String)">
+            <summary>
+            删除服务器文件 ** 
+            </summary>
+            <param name="directoryVPath">要删除的文件路径（相对于当前访问的目录）</param>
+            <param name="fileVPath">要删除的文件名</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.DeleteFile(System.String)">
+            <summary>
+            删除服务器文件 ** 
+            </summary>
+            <param name="fileVPath">要删除的路径（相对于当前访问的目录）</param>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.GetFileList(System.String)">
+            <summary>
+            列出服务器上指定目录下的所有文件 ** 
+            </summary>
+            <param name="directoryVPath">指定的目录（相对于当前访问的目录）</param>
+            <returns>文件名列表</returns>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.GetDirectoriesList(System.String)">
+            <summary>
+            列出服务器上指定目录下的所有子目录 ** 
+            </summary>
+            <param name="directoryVPath">指定的目录（相对于当前访问的目录）</param>
+            <returns>子目录名列表</returns>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.DirectoryExist(System.String)">
+            <summary>
+            检查指定的目录是否在服务器上存在 ** 
+            </summary>
+            <param name="directoryVPath">指定的目录（相对于当前访问的目录）</param>
+            <returns>如果存在返回true，否则返回false</returns>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.FileExist(System.String)">
+            <summary>
+            检查指定的文件是否在服务器上存在 ** 
+            </summary>
+            <param name="fileVPath">文件的路径（相对于当前访问的目录）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.FileExist(System.String,System.String)">
+            <summary>
+            检查指定的文件是否在服务器上存在 ** 
+            </summary>
+            <param name="directoryVPath">指定的目录（相对于当前访问的目录）</param>
+            <param name="remoteFileName">指定的文件</param>
+            <returns>如果存在返回true，否则返回false</returns>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.Dispose">
+            <summary>
+            释放资源 ** 
+            </summary>
+        </member>
+        <member name="M:Tiu.Net.FTPClient.Close">
+            <summary>
+            释放链接 ** 
+            </summary>
+        </member>
+        <member name="T:Tiu.Net.Constant">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Tiu.Net.Gadget">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Tiu.Net.WebRequestHelper">
+            <summary>
+            web请求帮助类
+            </summary>
+        </member>
+        <member name="M:Tiu.Net.WebRequestHelper.RequestGetString(System.String,Tiu.Net.WebRequestHelper.WebRequestMethod)">
+            <summary>
+            请求url，返回字符串形式的请求结果
+            </summary>
+            <param name="url"></param>
+            <param name="method"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Net.WebRequestHelper.RequestGetString(System.String)">
+            <summary>
+            请求url，返回字符串形式的请求结果（GET）
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tiu.Net.WebRequestHelper.WebRequestMethod">
+            <summary>
+            请求方式
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tiu.Attributes</name>
+    </assembly>
+    <members>
+        <member name="T:Tiu.Attributes.ModelTableAttribute">
+            <summary>
+            实体类对应数据表信息
+            </summary>
+        </member>
+        <member name="F:Tiu.Attributes.ModelTableAttribute._tableName">
+            <summary>
+            数据表的表名
+            </summary>
+        </member>
+        <member name="M:Tiu.Attributes.ModelTableAttribute.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="tableName">数据表的表名</param>
+        </member>
+        <member name="P:Tiu.Attributes.ModelTableAttribute.TableName">
+            <summary>
+            数据表的表名
+            </summary>
+        </member>
+        <member name="T:Tiu.Attributes.ModelColumnAttribute">
+            <summary>
+            实体类对应数据列信息
+            </summary>
+        </member>
+        <member name="F:Tiu.Attributes.ModelColumnAttribute._columnName">
+            <summary>
+            数据列名
+            </summary>
+        </member>
+        <member name="F:Tiu.Attributes.ModelColumnAttribute._identity">
+            <summary>
+            是否自增
+            </summary>
+        </member>
+        <member name="M:Tiu.Attributes.ModelColumnAttribute.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="columnName">数据列名</param>
+        </member>
+        <member name="M:Tiu.Attributes.ModelColumnAttribute.#ctor(System.String,System.Boolean)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="columnName">数据列名</param>
+            <param name="isAuto">是否自增</param>
+        </member>
+        <member name="P:Tiu.Attributes.ModelColumnAttribute.ColumnName">
+            <summary>
+            数据列名
+            </summary>
+        </member>
+        <member name="P:Tiu.Attributes.ModelColumnAttribute.Identity">
+            <summary>
+            是否自增
+            </summary>
+        </member>
+        <member name="T:Tiu.Attributes.EnumDescriptionAttribute">
+            <summary>
+            枚举描述信息
+            </summary>
+        </member>
+        <member name="F:Tiu.Attributes.EnumDescriptionAttribute._showInChinese">
+            <summary>
+            枚举的中文名称
+            </summary>
+        </member>
+        <member name="F:Tiu.Attributes.EnumDescriptionAttribute._webColor">
+            <summary>
+            枚举要显示成的Web颜色（eg：#D3D3D3）
+            </summary>
+        </member>
+        <member name="M:Tiu.Attributes.EnumDescriptionAttribute.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="showInChinese">枚举的中文名称</param>
+            <param name="webColor">枚举要显示成的Web颜色（eg：#D3D3D3）</param>
+        </member>
+        <member name="P:Tiu.Attributes.EnumDescriptionAttribute.ShowInChinese">
+            <summary>
+            枚举的中文名称
+            </summary>
+        </member>
+        <member name="P:Tiu.Attributes.EnumDescriptionAttribute.WebColor">
+            <summary>
+            枚举要显示成的Web颜色（eg：#D3D3D3）
+            </summary>
+        </member>
+    </members>
+</doc>

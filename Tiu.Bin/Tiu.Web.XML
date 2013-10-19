@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tiu.Web</name>
+    </assembly>
+    <members>
+        <member name="T:Tiu.Web.CookieHelper">
+            <summary>
+            Cookie帮助类
+            </summary>
+        </member>
+        <member name="M:Tiu.Web.CookieHelper.GetValueAsString(System.String,System.String)">
+            <summary>
+            获取Cookie值，返回字符串
+            </summary>
+            <param name="name">name</param>
+            <param name="defaultValue">为空时返回的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.CookieHelper.GetValueAsString(System.String)">
+            <summary>
+            获取Cookie值，返回字符串
+            </summary>
+            <param name="name">name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.CookieHelper.GetValueAsInt(System.String,System.Int32)">
+            <summary>
+            获取Cookie值，返回整型
+            </summary>
+            <param name="name">name</param>
+            <param name="defaultValue">为空时返回的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.CookieHelper.GetValueAsInt(System.String)">
+            <summary>
+            获取Cookie值，返回整型
+            </summary>
+            <param name="name">name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.CookieHelper.SetValue(System.String,System.String)">
+            <summary>
+            设置Cookie值，永久保存
+            </summary>
+            <param name="name">name</param>
+            <param name="value">value</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.CookieHelper.SetValue(System.String,System.String,System.DateTime)">
+            <summary>
+            设置Cookie值
+            </summary>
+            <param name="name">name</param>
+            <param name="value">value</param>
+            <param name="expires"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.CookieHelper.Remove(System.String)">
+            <summary>
+            清除Cookie
+            </summary>
+            <param name="name">name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.CookieHelper.RemoveAll">
+            <summary>
+            清除所有Cookie
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Tiu.Web.WebForm.UploadHelper">
+            <summary>
+            文件上传帮助类
+            </summary>
+        </member>
+        <member name="F:Tiu.Web.WebForm.UploadHelper.imgTypePreStr">
+            <summary>
+            图片文件文件类型的前缀
+            </summary>
+        </member>
+        <member name="M:Tiu.Web.WebForm.UploadHelper.SaveFileGetVPath(System.Web.UI.WebControls.FileUpload,System.String)">
+            <summary>
+            上传文件，返回保存文件的相对路径
+            </summary>
+            <param name="fileUpload">上传控件对象</param>
+            <param name="vDirectory">文件存放目录的虚拟路径（如果目录不存在，那么创建之）</param>
+            <returns>文件上传的虚拟路径（如："~/Files/Image/20110321100601333.jpg"）</returns>
+        </member>
+        <member name="M:Tiu.Web.WebForm.UploadHelper.SaveFileGetFileName(System.Web.UI.WebControls.FileUpload,System.String)">
+            <summary>
+            上传文件，返回保存文件的文件名
+            </summary>
+            <param name="fileUpload">上传控件对象</param>
+            <param name="vDirectory">文件存放目录的虚拟路径（如果目录不存在，那么创建之）</param>
+            <returns>保存文件的文件名（如："20110321100601333.jpg"）</returns>
+        </member>
+        <member name="M:Tiu.Web.WebForm.UploadHelper.SaveFile(System.Web.UI.WebControls.FileUpload,System.String,System.Boolean)">
+            <summary>
+            上传文件，返回保存文件的相对路径
+            </summary>
+            <param name="fileUpload">上传控件对象</param>
+            <param name="vDirectory">文件存放目录的虚拟路径（如果目录不存在，那么创建之）</param>
+            <param name="returnFileVPath">是否返回文件存放的虚拟路径，设置为false的话就只返回保存的文件名（带后缀）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.WebForm.UploadHelper.SaveThumbnail(System.Web.UI.WebControls.FileUpload,System.String,System.Int32,System.Int32,Tiu.Web.WebForm.UploadHelper.ThumbnailMode)">
+            <summary>
+            保存图片为缩略图
+            </summary>
+            <param name="fileUpload">上传控件对象</param>
+            <param name="savePath">文件存放的虚拟路径（如："~/Files/Image/20110321100601333-thumbnail.jpg"）</param>
+            <param name="height">缩略图的高</param>
+            <param name="width">缩略图的宽</param>
+            <param name="mode">缩略图模式</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="T:Tiu.Web.WebForm.UploadHelper.ThumbnailMode">
+            <summary>
+            缩略图模式
+            </summary>
+        </member>
+        <member name="F:Tiu.Web.WebForm.UploadHelper.ThumbnailMode.HW">
+            <summary>
+            指定高宽缩放（可能变形）
+            </summary>
+        </member>
+        <member name="F:Tiu.Web.WebForm.UploadHelper.ThumbnailMode.W">
+            <summary>
+            指定宽，高按比例
+            </summary>
+        </member>
+        <member name="F:Tiu.Web.WebForm.UploadHelper.ThumbnailMode.H">
+            <summary>
+            指定高，宽按比例
+            </summary>
+        </member>
+        <member name="F:Tiu.Web.WebForm.UploadHelper.ThumbnailMode.Cut">
+            <summary>
+            指定高宽裁减（不变形）
+            </summary>
+        </member>
+        <member name="T:Tiu.Web.SessionHelper">
+            <summary>
+            Session帮助类
+            </summary>
+        </member>
+        <member name="F:Tiu.Web.SessionHelper._session">
+            <summary>
+            当前Session
+            </summary>
+        </member>
+        <member name="M:Tiu.Web.SessionHelper.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:Tiu.Web.SessionHelper.GetValueAsInt(System.String)">
+            <summary>
+            获取键值对的值，返回结果为整形（获取不到返回0）
+            </summary>
+            <param name="key">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.SessionHelper.GetValueAsInt(System.String,System.Int32)">
+            <summary>
+            获取键值对的值，返回结果为整形（获取不到返回自定义的默认值）
+            </summary>
+            <param name="key">键</param>
+            <param name="defaultValue">获取不到值时返回的默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.SessionHelper.GetValueAsString(System.String)">
+            <summary>
+            获取键值对的值，返回结果为字符串类型（获取不到返回空字符串）
+            </summary>
+            <param name="key">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.SessionHelper.GetValueAsString(System.String,System.String)">
+            <summary>
+            获取键值对的值，返回结果为字符串类型（获取不到返回空字符串）
+            </summary>
+            <param name="key">键</param>
+            <param name="defalutValue">获取不到值时返回的默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.SessionHelper.SetValue(System.String,System.Object)">
+            <summary>
+            设置键值对的值
+            </summary>
+            <param name="key">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="T:Tiu.Web.UrlHelper">
+            <summary>
+            Url帮助类
+            </summary>
+        </member>
+        <member name="M:Tiu.Web.UrlHelper.GetRootUrl">
+            <summary>
+            获取当前绝对的根路径
+            </summary>
+        </member>
+        <member name="M:Tiu.Web.UrlHelper.GetUrlInSite(System.String)">
+            <summary>
+            获取虚拟路基在该网站中的路径
+            </summary>
+            <param name="vPath">虚拟路径(“~/”开头）</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tiu.Web.QueryStringHelper">
+            <summary>
+            QueryString帮助类
+            </summary>
+        </member>
+        <member name="F:Tiu.Web.QueryStringHelper._queryString">
+            <summary>
+            当前QueryString
+            </summary>
+        </member>
+        <member name="M:Tiu.Web.QueryStringHelper.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:Tiu.Web.QueryStringHelper.GetValueAsInt(System.String)">
+            <summary>
+            获取键值对的值，返回结果为整形（获取不到返回0）
+            </summary>
+            <param name="key">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.QueryStringHelper.GetValueAsInt(System.String,System.Int32)">
+            <summary>
+            获取键值对的值，返回结果为整形（获取不到返回自定义的默认值）
+            </summary>
+            <param name="key">键</param>
+            <param name="defaultValue">获取不到值时返回的默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.QueryStringHelper.GetValueAsString(System.String)">
+            <summary>
+            获取键值对的值，返回结果为字符串类型（获取不到返回空字符串）
+            </summary>
+            <param name="key">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.QueryStringHelper.GetValueAsString(System.String,System.String)">
+            <summary>
+            获取键值对的值，返回结果为字符串类型（获取不到返回空字符串）
+            </summary>
+            <param name="key">键</param>
+            <param name="defalutValue">获取不到值时返回的默认值</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tiu.Web.AppSettingsHelper">
+            <summary>
+            AppSettings帮助类
+            </summary>
+        </member>
+        <member name="M:Tiu.Web.AppSettingsHelper.GetAppSettingAsString(System.String,System.String)">
+            <summary>
+            获取AppSetting的值，返回字符串
+            </summary>
+            <param name="key">Key</param>
+            <param name="defaultValue">为空时返回的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.AppSettingsHelper.GetAppSettingAsString(System.String)">
+            <summary>
+            获取AppSetting的值，返回字符串
+            </summary>
+            <param name="key">Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.AppSettingsHelper.GetAppSettingAsInt(System.String,System.Int32)">
+            <summary>
+            获取AppSetting的值，返回整型
+            </summary>
+            <param name="key">Key</param>
+            <param name="defaultValue">为空时返回的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tiu.Web.AppSettingsHelper.GetAppSettingAsInt(System.String)">
+            <summary>
+            获取AppSetting的值，返回整型
+            </summary>
+            <param name="key">Key</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
